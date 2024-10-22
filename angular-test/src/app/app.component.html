@@ -1,0 +1,8 @@
+<div class="countdown-container">
+  <ng-container *ngIf="secondsLeft$ | async as seconds; else error">
+    <span class="countdown-text">Seconds left to deadline: {{ seconds }}</span>
+  </ng-container>
+  <ng-template #error>
+    <span class="error-text">Unable to load countdown timer</span>
+  </ng-template>
+</div>
