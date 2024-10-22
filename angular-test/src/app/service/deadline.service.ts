@@ -10,7 +10,9 @@ import { DeadlineResponse } from '../model/deadlineResponse';
 export class DeadlineService {
   private readonly apiUrl = '/api/deadline';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient
+  ) {}
 
   getSecondsLeft(): Observable<number> {
     return this.http.get<DeadlineResponse>(this.apiUrl).pipe(
